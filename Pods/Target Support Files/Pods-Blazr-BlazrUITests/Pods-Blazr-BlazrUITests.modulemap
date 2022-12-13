@@ -1,0 +1,6 @@
+framework module Pods_Blazr_BlazrUITests {
+  umbrella header "Pods-Blazr-BlazrUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

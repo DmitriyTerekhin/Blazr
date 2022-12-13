@@ -1,0 +1,6 @@
+framework module Pods_Blazr {
+  umbrella header "Pods-Blazr-umbrella.h"
+
+  export *
+  module * { export * }
+}
