@@ -17,7 +17,7 @@ protocol IPresentationAssembly {
     func webViewController(site: String, title: String?) -> WebViewViewController
     func settingsScreen() -> SettingsViewController
     func getCountryCheckScreen() -> LaunchScreenViewController
-//    func getLoaderScreen() -> LoaderViewController
+    func getLoaderScreen() -> LoaderViewController
 }
 
 class PresentationAssembly: IPresentationAssembly {
@@ -52,7 +52,8 @@ class PresentationAssembly: IPresentationAssembly {
     }
     
     func creatingDiceScreen() -> CreatingDiceViewController {
-        CreatingDiceViewController(presenter: CreatingQuestionPresenter(databaseService: serviceAssembly.databaseService))
+        CreatingDiceViewController(presenter: CreatingQuestionPresenter(databaseService: serviceAssembly.databaseService,
+                                                                        settingsService: serviceAssembly.userInfoService))
     }
     
     func blazrsScreen() -> BlazrViewController {
@@ -64,16 +65,18 @@ class PresentationAssembly: IPresentationAssembly {
                                presenter: SettingsPresenter(networkService: serviceAssembly.networkService,
                                                             userInfoService: serviceAssembly.userInfoService,
                                                             presentationAssembly: self,
-                                                            productService: serviceAssembly.purchasesService),
+                                                            productService: serviceAssembly.purchasesService,
+                                                            databaseService: serviceAssembly.databaseService),
                                presentationAssembly: self)
     }
     func tabbarController() -> CustomTabBarController {
         CustomTabBarController(tabBar: CustomTabBar(presentationAssembly: self))
     }
-//    func getLoaderScreen() -> LoaderViewController {
-//        let loaderVC = LoaderViewController()
-//        loaderVC.modalPresentationStyle = .overCurrentContext
-//        return loaderVC
-//    }
+    
+    func getLoaderScreen() -> LoaderViewController {
+        let loaderVC = LoaderViewController()
+        loaderVC.modalPresentationStyle = .overCurrentContext
+        return loaderVC
+    }
     
 }

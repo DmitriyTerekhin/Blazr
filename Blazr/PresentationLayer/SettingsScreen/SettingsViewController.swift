@@ -13,10 +13,12 @@ class SettingsViewController: UIViewController {
     private let contentView = SettingsView()
     private var settingsDataSource: [SettingType] = []
     private let presentationAssembly: IPresentationAssembly
+    private let loaderViewController: LoaderViewController
     
     init(presenter: ISettingsPresenter, presentationAssembly: IPresentationAssembly) {
         self.presenter = presenter
         self.presentationAssembly = presentationAssembly
+        self.loaderViewController = presentationAssembly.getLoaderScreen()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,6 +28,7 @@ class SettingsViewController: UIViewController {
     
     override func loadView() {
         self.view = contentView
+        presenter.attachView(view: self)
     }
     
     override func viewDidLoad() {
@@ -38,6 +41,26 @@ class SettingsViewController: UIViewController {
         settingsDataSource = presenter.getDataSource()
         contentView.tableView.delegate = self
         contentView.tableView.dataSource = self
+    }
+}
+
+extension SettingsViewController: ISettingsView {
+    func routeToWebSite(_ site: String) {
+        navigationController?.pushViewController(
+            presentationAssembly.webViewController(site: site, title: nil), animated: true
+        )
+    }
+    
+    func showLoader() {
+        tabBarController?.present(loaderViewController, animated: false)
+    }
+    
+    func hideLoader() {
+        loaderViewController.hideLoader()
+    }
+    
+    func showMessage(text: String) {
+        displayMsg(title: nil, msg: text)
     }
 }
 

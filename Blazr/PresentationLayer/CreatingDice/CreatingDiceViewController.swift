@@ -9,6 +9,7 @@ import UIKit
 
 class CreatingDiceViewController: UIViewController {
     
+    private var afterSeeingVideoCompletion: (() -> Void)?
     private var agreeWithPrivacy = true
     private var agreeWithTerms = true
     private var agreeWithUserContent = true
@@ -50,6 +51,7 @@ class CreatingDiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        IronSource.setRewardedVideoDelegate(self)
     }
     
     @objc
@@ -122,10 +124,15 @@ class CreatingDiceViewController: UIViewController {
             guard contentView.isQuestionExist else { return }
             viewState = .checking
         case .checking:
-            viewState = .letsDice
+            if !presenter.isPremiumActive() && IronSource.hasRewardedVideo() {
+                IronSource.showRewardedVideo(with: self, placement: nil)
+            } else {
+                viewState = .letsDice
+            }
         case .letsDice:
             viewState = .loading
         case .showResult:
+            (tabBarController as? CustomTabBarController)?.showScreen(.blazr)
             viewState = .initial
         default:
             break
@@ -173,5 +180,31 @@ class CreatingDiceViewController: UIViewController {
     @objc
     func textFieldValueDidChanged(sender: UITextField) {
         contentView.enableMainButton(text: sender.text, forceDisable: !allAgree)
+    }
+}
+
+// MARK: - IronSource video delegate
+extension CreatingDiceViewController: ISRewardedVideoDelegate {
+    func rewardedVideoHasChangedAvailability(_ available: Bool) {
+        print("video is available == \(available)")
+    }
+    
+    func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!) {}
+    
+    func rewardedVideoDidFailToShowWithError(_ error: Error!) {}
+    
+    func rewardedVideoDidOpen() {}
+    
+    func rewardedVideoDidStart() {}
+    
+    func rewardedVideoDidEnd() {
+        viewState = .letsDice
+    }
+    
+    func didClickRewardedVideo(_ placementInfo: ISPlacementInfo!) {}
+    
+    // Iron Source delegate
+    public func rewardedVideoDidClose() {
+        viewState = .letsDice
     }
 }

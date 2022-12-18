@@ -10,7 +10,8 @@ import Foundation
 protocol ICreatingQuestionPresenter: AnyObject {
     var diceResult: Int? { get }
     func getRandomNumber() -> Int
-    func saveResult(question: String) 
+    func saveResult(question: String)
+    func isPremiumActive() -> Bool
 }
 protocol ICreatingQuestionView: AnyObject {}
 
@@ -18,9 +19,18 @@ class CreatingQuestionPresenter: ICreatingQuestionPresenter {
     
     var diceResult: Int?
     private let databaseService: IDatabaseService
+    private let settingsService: ISensentiveInfoService
     
-    init(databaseService: IDatabaseService) {
+    init(
+        databaseService: IDatabaseService,
+        settingsService: ISensentiveInfoService
+    ) {
         self.databaseService = databaseService
+        self.settingsService = settingsService
+    }
+    
+    func isPremiumActive() -> Bool {
+        settingsService.isPremiumActive()
     }
     
     func getRandomNumber() -> Int {

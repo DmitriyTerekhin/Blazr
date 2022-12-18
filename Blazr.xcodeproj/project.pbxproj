@@ -25,6 +25,20 @@
 		917B3AD32944F3B300B8C4C1 /* AdaptiveLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AD22944F3B300B8C4C1 /* AdaptiveLayoutHelper.swift */; };
 		917B3AD52944F3DD00B8C4C1 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AD42944F3DD00B8C4C1 /* Dimension.swift */; };
 		917B3AD72944F47900B8C4C1 /* AdaptedConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AD62944F47900B8C4C1 /* AdaptedConstraint.swift */; };
+		917B3ADA294B045800B8C4C1 /* BlazrApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AD9294B045800B8C4C1 /* BlazrApiEndPoint.swift */; };
+		917B3ADC294B055700B8C4C1 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3ADB294B055700B8C4C1 /* ApiConstants.swift */; };
+		917B3ADE294DCBE100B8C4C1 /* BlazrJSONEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3ADD294DCBE100B8C4C1 /* BlazrJSONEndPoint.swift */; };
+		917B3AE0294DCC6B00B8C4C1 /* ConfigFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3ADF294DCC6B00B8C4C1 /* ConfigFactory.swift */; };
+		917B3AE2294DCCC200B8C4C1 /* LinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AE1294DCCC200B8C4C1 /* LinkParser.swift */; };
+		917B3AE4294DD2D400B8C4C1 /* CountryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AE3294DD2D400B8C4C1 /* CountryParser.swift */; };
+		917B3AE6294DD36700B8C4C1 /* SetPremiumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AE5294DD36700B8C4C1 /* SetPremiumParser.swift */; };
+		917B3AE8294DD3DE00B8C4C1 /* AppleAuthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AE7294DD3DE00B8C4C1 /* AppleAuthParser.swift */; };
+		917B3AEA294DD41800B8C4C1 /* AuthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AE9294DD41800B8C4C1 /* AuthParser.swift */; };
+		917B3AEC294DD4FE00B8C4C1 /* DeleteParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AEB294DD4FE00B8C4C1 /* DeleteParser.swift */; };
+		917B3AEE294DD59400B8C4C1 /* AppleRevokeTokenParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AED294DD59400B8C4C1 /* AppleRevokeTokenParser.swift */; };
+		917B3AF0294DD64E00B8C4C1 /* SavePushTokenParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AEF294DD64E00B8C4C1 /* SavePushTokenParser.swift */; };
+		917B3AF2294DD6AC00B8C4C1 /* AppleApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AF1294DD6AC00B8C4C1 /* AppleApiEndPoint.swift */; };
+		917B3AF5294E561A00B8C4C1 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B3AF4294E561A00B8C4C1 /* LoaderViewController.swift */; };
 		91BFF8202940894600EC3501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFF81F2940894600EC3501 /* AppDelegate.swift */; };
 		91BFF8222940894600EC3501 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFF8212940894600EC3501 /* SceneDelegate.swift */; };
 		91BFF8292940894900EC3501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BFF8282940894900EC3501 /* Assets.xcassets */; };
@@ -131,6 +145,20 @@
 		917B3AD22944F3B300B8C4C1 /* AdaptiveLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutHelper.swift; sourceTree = "<group>"; };
 		917B3AD42944F3DD00B8C4C1 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		917B3AD62944F47900B8C4C1 /* AdaptedConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptedConstraint.swift; sourceTree = "<group>"; };
+		917B3AD9294B045800B8C4C1 /* BlazrApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazrApiEndPoint.swift; sourceTree = "<group>"; };
+		917B3ADB294B055700B8C4C1 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		917B3ADD294DCBE100B8C4C1 /* BlazrJSONEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazrJSONEndPoint.swift; sourceTree = "<group>"; };
+		917B3ADF294DCC6B00B8C4C1 /* ConfigFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFactory.swift; sourceTree = "<group>"; };
+		917B3AE1294DCCC200B8C4C1 /* LinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkParser.swift; sourceTree = "<group>"; };
+		917B3AE3294DD2D400B8C4C1 /* CountryParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryParser.swift; sourceTree = "<group>"; };
+		917B3AE5294DD36700B8C4C1 /* SetPremiumParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPremiumParser.swift; sourceTree = "<group>"; };
+		917B3AE7294DD3DE00B8C4C1 /* AppleAuthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthParser.swift; sourceTree = "<group>"; };
+		917B3AE9294DD41800B8C4C1 /* AuthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthParser.swift; sourceTree = "<group>"; };
+		917B3AEB294DD4FE00B8C4C1 /* DeleteParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteParser.swift; sourceTree = "<group>"; };
+		917B3AED294DD59400B8C4C1 /* AppleRevokeTokenParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRevokeTokenParser.swift; sourceTree = "<group>"; };
+		917B3AEF294DD64E00B8C4C1 /* SavePushTokenParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePushTokenParser.swift; sourceTree = "<group>"; };
+		917B3AF1294DD6AC00B8C4C1 /* AppleApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleApiEndPoint.swift; sourceTree = "<group>"; };
+		917B3AF4294E561A00B8C4C1 /* LoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		91BFF81C2940894600EC3501 /* Blazr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blazr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BFF81F2940894600EC3501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91BFF8212940894600EC3501 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +293,14 @@
 			path = SizeHelper;
 			sourceTree = "<group>";
 		};
+		917B3AF3294E55CB00B8C4C1 /* LoaderScreen */ = {
+			isa = PBXGroup;
+			children = (
+				917B3AF4294E561A00B8C4C1 /* LoaderViewController.swift */,
+			);
+			path = LoaderScreen;
+			sourceTree = "<group>";
+		};
 		91BFF8132940894500EC3501 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +357,7 @@
 		91BFF84F294089AE00EC3501 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				917B3AF3294E55CB00B8C4C1 /* LoaderScreen */,
 				91BFF8C52942267E00EC3501 /* BlazrScreen */,
 				91BFF8A72940C3C600EC3501 /* SettingsScreen */,
 				91BFF8A22940C28000EC3501 /* CommonComponents */,
@@ -448,6 +485,8 @@
 				91BFF87C2940A76D00EC3501 /* IRequestSender.swift */,
 				91BFF87E2940A78E00EC3501 /* RequestSender.swift */,
 				91BFF8802940A81700EC3501 /* NetworkError.swift */,
+				917B3ADB294B055700B8C4C1 /* ApiConstants.swift */,
+				917B3ADF294DCC6B00B8C4C1 /* ConfigFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -456,6 +495,14 @@
 			isa = PBXGroup;
 			children = (
 				91BFF8832940A89500EC3501 /* IPars.swift */,
+				917B3AE1294DCCC200B8C4C1 /* LinkParser.swift */,
+				917B3AE3294DD2D400B8C4C1 /* CountryParser.swift */,
+				917B3AE5294DD36700B8C4C1 /* SetPremiumParser.swift */,
+				917B3AE7294DD3DE00B8C4C1 /* AppleAuthParser.swift */,
+				917B3AE9294DD41800B8C4C1 /* AuthParser.swift */,
+				917B3AEB294DD4FE00B8C4C1 /* DeleteParser.swift */,
+				917B3AED294DD59400B8C4C1 /* AppleRevokeTokenParser.swift */,
+				917B3AEF294DD64E00B8C4C1 /* SavePushTokenParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -464,6 +511,9 @@
 			isa = PBXGroup;
 			children = (
 				91BFF8862940AA0600EC3501 /* ApiConfiguration.swift */,
+				917B3AD9294B045800B8C4C1 /* BlazrApiEndPoint.swift */,
+				917B3ADD294DCBE100B8C4C1 /* BlazrJSONEndPoint.swift */,
+				917B3AF1294DD6AC00B8C4C1 /* AppleApiEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -823,12 +873,15 @@
 				917B3AC8294485DA00B8C4C1 /* ManageObjectTypeExtensions.swift in Sources */,
 				917B3AD32944F3B300B8C4C1 /* AdaptiveLayoutHelper.swift in Sources */,
 				91BFF8AB2941CCFF00EC3501 /* UILabelExt.swift in Sources */,
+				917B3AF0294DD64E00B8C4C1 /* SavePushTokenParser.swift in Sources */,
 				91BFF8B82941EA4400EC3501 /* EnterModel.swift in Sources */,
 				917B3AC02944857500B8C4C1 /* BlazrEntity.swift in Sources */,
 				91BFF8842940A89500EC3501 /* IPars.swift in Sources */,
 				91BFF859294092F700EC3501 /* EnterScreenView.swift in Sources */,
 				91BFF85E294096EB00EC3501 /* CreatingDiceViewController.swift in Sources */,
 				91BFF8BE2942102600EC3501 /* SettingsPresenter.swift in Sources */,
+				917B3ADA294B045800B8C4C1 /* BlazrApiEndPoint.swift in Sources */,
+				917B3ADE294DCBE100B8C4C1 /* BlazrJSONEndPoint.swift in Sources */,
 				917B3ABA29436AE700B8C4C1 /* GradientButtonView.swift in Sources */,
 				917B3AC4294485A400B8C4C1 /* CoreDataProtocols.swift in Sources */,
 				91BFF89B2940C1B200EC3501 /* CustomTabBarController.swift in Sources */,
@@ -840,10 +893,15 @@
 				91BFF88B2940ABB100EC3501 /* LaunchScreenView.swift in Sources */,
 				917B3AD52944F3DD00B8C4C1 /* Dimension.swift in Sources */,
 				91BFF88D2940ABB100EC3501 /* LaunchScreenViewController.swift in Sources */,
+				917B3ADC294B055700B8C4C1 /* ApiConstants.swift in Sources */,
+				917B3AE6294DD36700B8C4C1 /* SetPremiumParser.swift in Sources */,
 				91BFF8202940894600EC3501 /* AppDelegate.swift in Sources */,
 				91BFF8722940A43100EC3501 /* PurchasesModels.swift in Sources */,
+				917B3AE0294DCC6B00B8C4C1 /* ConfigFactory.swift in Sources */,
 				91BFF8A12940C1FE00EC3501 /* CustomItemView.swift in Sources */,
+				917B3AEA294DD41800B8C4C1 /* AuthParser.swift in Sources */,
 				91BFF85629408ED800EC3501 /* AskPermissionView.swift in Sources */,
+				917B3AE2294DCCC200B8C4C1 /* LinkParser.swift in Sources */,
 				91BFF8932940BAE800EC3501 /* UIViewExt.swift in Sources */,
 				91BFF8762940A4EB00EC3501 /* ProductService.swift in Sources */,
 				91BFF8782940A6B500EC3501 /* AppInfoService.swift in Sources */,
@@ -852,12 +910,16 @@
 				91BFF8A42940C29000EC3501 /* CustomNavigationController.swift in Sources */,
 				91BFF8CB29422B0B00EC3501 /* CreatingDiceModel.swift in Sources */,
 				917B3ACE29448C5900B8C4C1 /* BlazrResultListTableViewCell.swift in Sources */,
+				917B3AEE294DD59400B8C4C1 /* AppleRevokeTokenParser.swift in Sources */,
 				91BFF8BA29420E4900EC3501 /* SettingsView.swift in Sources */,
 				917B3AC22944858700B8C4C1 /* CoreDataStack.swift in Sources */,
 				917B3AD72944F47900B8C4C1 /* AdaptedConstraint.swift in Sources */,
+				917B3AEC294DD4FE00B8C4C1 /* DeleteParser.swift in Sources */,
 				91BFF8812940A81700EC3501 /* NetworkError.swift in Sources */,
 				91BFF8872940AA0600EC3501 /* ApiConfiguration.swift in Sources */,
+				917B3AF5294E561A00B8C4C1 /* LoaderViewController.swift in Sources */,
 				917B3ACC294488CE00B8C4C1 /* DatabaseService.swift in Sources */,
+				917B3AE4294DD2D400B8C4C1 /* CountryParser.swift in Sources */,
 				917B3AB82943567C00B8C4C1 /* CreatingQuestionPresenter.swift in Sources */,
 				91BFF8622940982700EC3501 /* UIColorExt.swift in Sources */,
 				91BFF85329408CCA00EC3501 /* AskPermissionsViewController.swift in Sources */,
@@ -867,7 +929,9 @@
 				91BFF8C7294226BA00EC3501 /* BlazrViewController.swift in Sources */,
 				91BFF8742940A45200EC3501 /* Purchases.swift in Sources */,
 				91BFF8602940975600EC3501 /* CreatingView.swift in Sources */,
+				917B3AE8294DD3DE00B8C4C1 /* AppleAuthParser.swift in Sources */,
 				91BFF8C9294226DE00EC3501 /* BlazrView.swift in Sources */,
+				917B3AF2294DD6AC00B8C4C1 /* AppleApiEndPoint.swift in Sources */,
 				91BFF86929409E1D00EC3501 /* ServiceAssembly.swift in Sources */,
 				91BFF8C22942123600EC3501 /* ClassExt.swift in Sources */,
 				91BFF8222940894600EC3501 /* SceneDelegate.swift in Sources */,
@@ -1072,6 +1136,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/IronSourceSDK/IronSource/IronSource.xcframework/ios-i386_x86_64-simulator/IronSource.framework/Versions/A/Headers/IronSource.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1103,6 +1168,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/IronSourceSDK/IronSource/IronSource.xcframework/ios-i386_x86_64-simulator/IronSource.framework/Versions/A/Headers/IronSource.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

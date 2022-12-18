@@ -22,7 +22,7 @@ target 'Blazr' do
   pod 'YandexMobileMetrica/Dynamic', '4.2.0'
   pod 'FSCalendar'
   pod 'IronSourceSDK','7.2.5.0'
-
+  
   target 'BlazrTests' do
     inherit! :search_paths
     # Pods for testing

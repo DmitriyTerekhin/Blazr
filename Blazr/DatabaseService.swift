@@ -11,6 +11,7 @@ import CoreData
 protocol IDatabaseService {
     func saveResult(result: BlazrResult, completionHandler: FinishedCompletionHandler)
     func getResults(with predicate: NSPredicate?) -> [BlazrResult]
+    func deleteAllBlazrs(completionHandler: FinishedCompletionHandler)
 }
 
 class DatabaseService: IDatabaseService {
@@ -21,6 +22,10 @@ class DatabaseService: IDatabaseService {
     
     func getResults(with predicate: NSPredicate?) -> [BlazrResult] {
         db.getResults(withPredicate: predicate, by: CDStack.mainContext).map({ BlazrResult(fromDB: $0)})
+    }
+    
+    func deleteAllBlazrs(completionHandler: FinishedCompletionHandler) {
+        db.deleteAllBlazrs(context: CDStack.mainContext, completion: completionHandler)
     }
     
     private let db: IStorageManager

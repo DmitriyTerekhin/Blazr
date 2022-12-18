@@ -6,17 +6,35 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ISInitializationDelegate {
+    
+    private enum Constants {
+        static let IronAppKey = "17d2dfd45"
+    }
     
     var window: UIWindow?
     let rootAssembly = RootAssembly()
     let notificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        notificationCenter.delegate = self
+        setupFrameworks()
+        if #available(iOS 13, *) { }
+        else { createStartView(window: window ?? UIWindow(frame: UIScreen.main.bounds)) }
         return true
+    }
+    
+    private func setupFrameworks() {
+        IronSource.initWithAppKey(Constants.IronAppKey, delegate: self)
+    }
+    
+    // Iron Source
+    @objc
+    func initializationDidComplete() {
+        ISIntegrationHelper.validateIntegration()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -58,3 +76,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 14.0, *) {
+            completionHandler([.alert, .sound, .badge, .banner])
+        } else {
+            completionHandler([.alert, .sound, .badge])
+        }
+    }
+    
+    func application( _ application: UIApplication,
+                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+        rootAssembly.serviceAssembly.userInfoService.saveNotificationToken(token: token)
+        rootAssembly.serviceAssembly.networkService.sendPushToken(token: token)
+    }
+
+    func application(
+        _ application: UIApplication,
+        didFailToRegisterForRemoteNotificationsWithError error: Error
+    ) {
+        print("Failed to register: \(error)")
+    }
+}

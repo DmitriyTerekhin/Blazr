@@ -40,6 +40,8 @@ class BlazrViewController: UIViewController {
         else {
             contentView.statusTitleLabel.isHidden = false
             contentView.bowlImageView.isHidden = false
+            contentView.table.isHidden = true
+            contentView.table.reloadData()
             return
         }
         contentView.table.isHidden = false
